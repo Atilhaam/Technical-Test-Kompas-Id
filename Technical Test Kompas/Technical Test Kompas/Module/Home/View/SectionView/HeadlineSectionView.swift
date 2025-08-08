@@ -16,9 +16,6 @@ struct HeadlineSectionView: View {
 
     @StateObject private var viewModel: HomeViewModel
     @State private var isSharing: Bool = false
-    @State private var audioPlayer: AVPlayer?
-    @State private var isPlaying: Bool = false
-    @State private var currentlyPlayingID: String? = nil
 
     
     init(content: HeadlineData, viewModel: HomeViewModel, onSelectNews: ((NewsModel) -> Void)? = nil) {
@@ -67,30 +64,11 @@ struct HeadlineSectionView: View {
                     
                     HStack(spacing: 8) {
                         Button(action: {
-                            if currentlyPlayingID == content.id {
-                                if isPlaying {
-                                    audioPlayer?.pause()
-                                    isPlaying = false
-                                } else {
-                                    audioPlayer?.play()
-                                    isPlaying = true
-                                }
-                            } else {
-                                if let url = URL(string: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3") {
-                                    startBackgroundAudio(from: url, title: content.headline ?? "News Audio", articleID: content.id ?? "")
-                                }
-                            }
+                           
                         }) {
-                            if isPlaying && currentlyPlayingID == content.id {
-                                Image(systemName: "pause.circle.fill")
-                                    .resizable()
-                                    .frame(width: 40, height: 40)
-                                    .foregroundColor(.blue)
-                            } else {
-                                Image("listen")
-                                    .resizable()
-                                    .frame(width: 40, height: 40)
-                            }
+                            Image("listen")
+                                .resizable()
+                                .frame(width: 40, height: 40)
                         }
                        
                         Button(action: {
@@ -197,30 +175,11 @@ struct HeadlineSectionView: View {
                                 
                                 HStack {
                                     Button(action: {
-                                        if currentlyPlayingID == article.id {
-                                            if isPlaying {
-                                                audioPlayer?.pause()
-                                                isPlaying = false
-                                            } else {
-                                                audioPlayer?.play()
-                                                isPlaying = true
-                                            }
-                                        } else {
-                                            if let url = URL(string: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3") {
-                                                startBackgroundAudio(from: url, title: article.title ?? "News Audio", articleID: article.id)
-                                            }
-                                        }
+                                        
                                     }) {
-                                        if isPlaying && currentlyPlayingID == article.id {
-                                            Image(systemName: "pause.circle.fill")
-                                                .resizable()
-                                                .frame(width: 40, height: 40)
-                                                .foregroundColor(.blue)
-                                        } else {
-                                            Image("listen")
-                                                .resizable()
-                                                .frame(width: 40, height: 40)
-                                        }
+                                        Image("listen")
+                                            .resizable()
+                                            .frame(width: 40, height: 40)
                                     }
                                     
                                     Button(action: {
@@ -294,75 +253,3 @@ struct HeadlineSectionView: View {
     
 }
 
-extension HeadlineSectionView {
-    // MARK: - AUDIO BACKGROUND PLAYER
-    
-    private func startBackgroundAudio(from url: URL, title: String, articleID: String) {
-        do {
-            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
-            try AVAudioSession.sharedInstance().setActive(true)
-        } catch {
-            print("Audio session error: \(error)")
-        }
-        
-        currentlyPlayingID = articleID
-        isPlaying = true
-        
-        audioPlayer = AVPlayer(url: url)
-        audioPlayer?.play()
-        
-        setupNowPlaying(title: title)
-        
-        // Keep lock screen scrubber in sync
-        audioPlayer?.addPeriodicTimeObserver(forInterval: CMTime(seconds: 1, preferredTimescale: 2),
-                                             queue: .main) { time in
-            var info = MPNowPlayingInfoCenter.default().nowPlayingInfo ?? [:]
-            info[MPNowPlayingInfoPropertyElapsedPlaybackTime] = CMTimeGetSeconds(time)
-            info[MPNowPlayingInfoPropertyPlaybackRate] = isPlaying ? 1.0 : 0.0
-            MPNowPlayingInfoCenter.default().nowPlayingInfo = info
-        }
-    }
-    
-    private func setupNowPlaying(title: String) {
-        var nowPlayingInfo: [String: Any] = [:]
-        nowPlayingInfo[MPMediaItemPropertyTitle] = title
-        nowPlayingInfo[MPMediaItemPropertyArtist] = "News Reader"
-        
-        if let currentItem = audioPlayer?.currentItem {
-            let duration = CMTimeGetSeconds(currentItem.asset.duration)
-            nowPlayingInfo[MPMediaItemPropertyPlaybackDuration] = duration
-            nowPlayingInfo[MPNowPlayingInfoPropertyElapsedPlaybackTime] = 0
-            nowPlayingInfo[MPNowPlayingInfoPropertyPlaybackRate] = 1.0
-        }
-        
-        MPNowPlayingInfoCenter.default().nowPlayingInfo = nowPlayingInfo
-        
-        let commandCenter = MPRemoteCommandCenter.shared()
-        
-        commandCenter.playCommand.isEnabled = true
-        commandCenter.playCommand.addTarget { _ in
-            audioPlayer?.play()
-            isPlaying = true
-            return .success
-        }
-        
-        commandCenter.pauseCommand.isEnabled = true
-        commandCenter.pauseCommand.addTarget { _ in
-            audioPlayer?.pause()
-            isPlaying = false
-            return .success
-        }
-        
-        // Allow timestamp scrubbing from lock screen
-        commandCenter.changePlaybackPositionCommand.isEnabled = true
-        commandCenter.changePlaybackPositionCommand.addTarget { event in
-            if let positionEvent = event as? MPChangePlaybackPositionCommandEvent {
-                let time = CMTime(seconds: positionEvent.positionTime, preferredTimescale: 1)
-                audioPlayer?.seek(to: time)
-                return .success
-            }
-            return .commandFailed
-        }
-    }
-    
-}
