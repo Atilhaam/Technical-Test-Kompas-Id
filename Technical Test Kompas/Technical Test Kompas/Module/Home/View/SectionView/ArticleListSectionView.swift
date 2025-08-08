@@ -221,7 +221,7 @@ struct LabelBadge: View {
                 .scaledToFit()
                 .frame(width: 12, height: 10)
                         
-            Text("\(label.uppercased())")
+            Text(label)
                 .font(.system(size: 12, weight: .semibold))
         }
         .foregroundColor(.white)

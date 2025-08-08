@@ -176,7 +176,7 @@ struct TypeBadge: View {
     
     var body: some View {
         HStack(spacing: 8) {
-            Text("\(label.uppercased())")
+            Text(label)
                 .font(.system(size: 12, weight: .semibold))
         }
         .foregroundColor(.white)
