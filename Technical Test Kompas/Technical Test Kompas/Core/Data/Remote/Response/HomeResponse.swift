@@ -88,6 +88,7 @@ struct HeadlineData: Codable, Identifiable {
     let articles: [Article]?
     let imageURL: String?
     let newsURL: String?
+    let audioURL: String?
     
     let id: String?
 
@@ -100,6 +101,7 @@ struct HeadlineData: Codable, Identifiable {
         case imageURL
         case id
         case newsURL
+        case audioURL
     }
 }
 
@@ -109,6 +111,7 @@ struct Article: Codable, Identifiable {
     let id: String
     let imageURL: String?
     let newsURL: String?
+    let audioURL: String?
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -116,6 +119,7 @@ struct Article: Codable, Identifiable {
         case publishedTime = "published_time"
         case imageURL
         case newsURL
+        case audioURL
     }
 }
 
@@ -137,6 +141,7 @@ struct ArticleListItem: Codable, Identifiable {
     let publishedDate: String?
     let id: String?
     let newsURL: String?
+    let audioURL: String?
 
     enum CodingKeys: String, CodingKey {
         case id
@@ -149,6 +154,7 @@ struct ArticleListItem: Codable, Identifiable {
         case publishedTime
         case publishedDate
         case newsURL
+        case audioURL
     }
 }
 
@@ -217,6 +223,7 @@ struct LiveArticle: Codable, Identifiable {
     let publishedTime: String?
     let imageURL: String?
     let newsURL: String?
+    let audioURL: String?
 
     enum CodingKeys: String, CodingKey {
         case id
@@ -225,6 +232,7 @@ struct LiveArticle: Codable, Identifiable {
         case publishedTime = "published_time"
         case imageURL
         case newsURL
+        case audioURL
     }
 }
 
@@ -238,6 +246,7 @@ struct FeaturedArticle: Codable, Identifiable {
     let title: String?
     let imageURL: String?
     let newsURL: String?
+    let audioURL: String?
 }
 
 // MARK: - Section Identifiable Support

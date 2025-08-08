@@ -40,7 +40,7 @@ struct ArticleListSectionView: View {
                             .padding(8)
                     }
                 }
-                .padding(.bottom, 8)
+                .padding(.vertical, 8)
                 .padding(.horizontal)
             }
             
@@ -85,7 +85,7 @@ struct ArticleListSectionView: View {
                                     Button {
                                         if playbackManager.currentlyPlayingID == article.id {
                                             playbackManager.togglePlayPause()
-                                        } else if let url = URL(string: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3") {
+                                        } else if let url = URL(string: article.audioURL ?? "") {
                                             playbackManager.startBackgroundAudio(
                                                 from: url,
                                                 title: article.title ?? "",
@@ -145,7 +145,8 @@ struct ArticleListSectionView: View {
                                 newsDescription: article.description ?? "",
                                 publishedTime: article.publishedTime ?? "",
                                 PublishedDate: "",
-                                newsURL: article.newsURL ?? ""
+                                newsURL: article.newsURL ?? "",
+                                audioURL: article.audioURL ?? ""
                             )
                             onSelectNews?(item)
                         }
@@ -158,6 +159,7 @@ struct ArticleListSectionView: View {
             ShareSheet(activityItems: viewModel.shareContent)
         }
         .background(Color(.systemBackground))
+        .padding(.vertical)
     }
 }
 

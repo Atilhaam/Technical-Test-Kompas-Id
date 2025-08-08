@@ -16,6 +16,7 @@ class SavedNewsEntity: Object {
     @objc dynamic var publishedTime: String = ""
     @objc dynamic var publishedDate: String = ""
     @objc dynamic var newsURL: String = ""
+    @objc dynamic var audioURL: String = ""
 
     override static func primaryKey() -> String? {
         return "id"

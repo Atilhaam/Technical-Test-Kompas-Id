@@ -10,27 +10,31 @@
                 "source": "Harian Kompas",
                 "imageURL": "https://cdn-dam.kompas.id/images/2024/08/01/8337230e094f9b8a89aca88b0775f05f-cover.jpg",
                 "newsURL": "https://www.kompas.id/artikel/celaka-duabelas",
+                "audioURL": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
                 "articles": [
                     {
                         "title": "Kasus Pembunuhan Global: Ekonomi Lemah, Pembunuhan Bertambah",
                         "published_time": "5 menit lalu",
                         "id": "12B",
                         "newsURL": "https://www.kompas.id/artikel/kasus-pembunuhan-tinggi-di-negara-miskin",
-                        "imageURL": "https://cdn-dam.kompas.id/images/2024/08/01/8337230e094f9b8a89aca88b0775f05f-cover.jpg"
+                        "imageURL": "https://cdn-dam.kompas.id/images/2024/08/01/8337230e094f9b8a89aca88b0775f05f-cover.jpg",
+                        "audioURL": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
                     },
                     {
                         "title": "Cepat Emosi, Anak Muda Indonesia Gampang Membunuh",
                         "published_time": "5 menit lalu",
                         "id": "12C",
                         "newsURL": "https://www.kompas.id/artikel/kasus-pembunuhan-tinggi-di-negara-miskin",
-                        "imageURL": "https://cdn-dam.kompas.id/images/2024/08/01/8337230e094f9b8a89aca88b0775f05f-cover.jpg"
+                        "imageURL": "https://cdn-dam.kompas.id/images/2024/08/01/8337230e094f9b8a89aca88b0775f05f-cover.jpg",
+                        "audioURL": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
                     },
                     {
                         "title": "Pembunuhan oleh Keluarga, dari Suami Bunuh Istri hingga Ibu Bunuh Anak",
                         "published_time": "5 menit lalu",
                         "id": "12D",
                         "newsURL": "https://www.kompas.id/artikel/kasus-pembunuhan-tinggi-di-negara-miskin",
-                        "imageURL": "https://cdn-dam.kompas.id/images/2024/08/01/8337230e094f9b8a89aca88b0775f05f-cover.jpg"
+                        "imageURL": "https://cdn-dam.kompas.id/images/2024/08/01/8337230e094f9b8a89aca88b0775f05f-cover.jpg",
+                        "audioURL": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
                     }
                 ]
             }
@@ -45,7 +49,8 @@
                     "title": "Di Jakarta, Prabowo Tinggalkan Lokasi Kampanye Akbar di GBK",
                     "published_time": "1 menit lalu",
                     "imageURL": "https://asset.kompas.com/crops/A1RlVa5uAjJPW3n0uBXLW5STI7s=/0x0:2559x1706/1200x800/data/photo/2024/02/10/65c78422dbf48.jpg",
-                    "newsURL": "https://www.kompas.id/artikel/kasus-pembunuhan-tinggi-di-negara-miskin"
+                    "newsURL": "https://www.kompas.id/artikel/kasus-pembunuhan-tinggi-di-negara-miskin",
+                    "audioURL": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
                 },
                 "related_articles": [
                     {
@@ -53,14 +58,16 @@
                         "title": "Megawati Bernyanyi dan Berjoget saat Kampanye Ganjar-Mahfud di Semarang",
                         "published_time": "5 menit lalu",
                         "newsURL": "https://www.kompas.id/artikel/kasus-pembunuhan-tinggi-di-negara-miskin",
-                        "imageURL": "https://cdn-dam.kompas.id/images/2024/08/01/8337230e094f9b8a89aca88b0775f05f-cover.jpg"
+                        "imageURL": "https://cdn-dam.kompas.id/images/2024/08/01/8337230e094f9b8a89aca88b0775f05f-cover.jpg",
+                        "audioURL": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
                     },
                     {
                         "id": "16C",
                         "title": "Gibran Harap Semua Pendukung di GBK Coblos No 2 di TPS",
                         "published_time": "15 menit lalu",
                         "newsURL": "https://www.kompas.id/artikel/kasus-pembunuhan-tinggi-di-negara-miskin",
-                        "imageURL": "https://cdn-dam.kompas.id/images/2024/08/01/8337230e094f9b8a89aca88b0775f05f-cover.jpg"
+                        "imageURL": "https://cdn-dam.kompas.id/images/2024/08/01/8337230e094f9b8a89aca88b0775f05f-cover.jpg",
+                        "audioURL": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
                     }
                 ],
                 "more_reports": {
@@ -72,19 +79,22 @@
                         "id": "16D",
                         "title": "Presiden Minta 'Bola Panas' Kadin Jangan Dilempar ke Dirinya",
                         "imageURL": "https://asset.kompas.com/crops/A1RlVa5uAjJPW3n0uBXLW5STI7s=/0x0:2559x1706/1200x800/data/photo/2024/02/10/65c78422dbf48.jpg",
-                        "newsURL": "https://www.kompas.id/artikel/kasus-pembunuhan-tinggi-di-negara-miskin"
+                        "newsURL": "https://www.kompas.id/artikel/kasus-pembunuhan-tinggi-di-negara-miskin",
+                        "audioURL": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
                     },
                     {
                         "id": "16E",
                         "title": "Peran Kadin dalam Transformasi Ekonomi Digital",
                         "imageURL": "https://asset.kompas.com/crops/A1RlVa5uAjJPW3n0uBXLW5STI7s=/0x0:2559x1706/1200x800/data/photo/2024/02/10/65c78422dbf48.jpg",
-                        "newsURL": "https://www.kompas.id/artikel/kasus-pembunuhan-tinggi-di-negara-miskin"
+                        "newsURL": "https://www.kompas.id/artikel/kasus-pembunuhan-tinggi-di-negara-miskin",
+                        "audioURL": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
                     },
                     {
                         "id": "16F",
                         "title": "Tantangan Kadin di Tengah Tekanan Politik dan Ekonomi",
                         "imageURL": "https://asset.kompas.com/crops/A1RlVa5uAjJPW3n0uBXLW5STI7s=/0x0:2559x1706/1200x800/data/photo/2024/02/10/65c78422dbf48.jpg",
-                        "newsURL": "https://www.kompas.id/artikel/kasus-pembunuhan-tinggi-di-negara-miskin"
+                        "newsURL": "https://www.kompas.id/artikel/kasus-pembunuhan-tinggi-di-negara-miskin",
+                        "audioURL": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
                     }
                 ]
             }
@@ -137,21 +147,24 @@
                     "image_description": "Foto resmi jajaran menteri berdiri di Istana Negara",
                     "imageURL" : "https://asset.kgnewsroom.com/photo/pre/2024/09/17/994eb61e-1180-4b33-ac8d-59e2bb4e4ef0_jpg.jpg",
                     "newsURL": "https://www.kompas.id/artikel/kasus-pembunuhan-tinggi-di-negara-miskin",
-                    "media_count": 10
+                    "media_count": 10,
+                    "audioURL": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
                 },
                 {
                     "id": "13B",
                     "title": "Koalisi Supergemuk; Kabinet 'Zaken' Bukan, Ya?",
                     "newsURL": "https://www.kompas.id/artikel/kasus-pembunuhan-tinggi-di-negara-miskin",
                     "description": null,
-                    "imageURL": "https://cdn-dam.kompas.id/images/2024/08/01/8337230e094f9b8a89aca88b0775f05f-cover.jpg"
+                    "imageURL": "https://cdn-dam.kompas.id/images/2024/08/01/8337230e094f9b8a89aca88b0775f05f-cover.jpg",
+                    "audioURL": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
                 },
                 {
                     "id": "13C",
                     "title": "Walau Tanpa Partisipasi Publik, DPR Bakal Sahkan Tiga RUU Kilat Kamis Esok",
                     "description": null,
                     "newsURL": "https://www.kompas.id/artikel/kasus-pembunuhan-tinggi-di-negara-miskin",
-                    "imageURL": "https://cdn-dam.kompas.id/images/2024/08/01/8337230e094f9b8a89aca88b0775f05f-cover.jpg"
+                    "imageURL": "https://cdn-dam.kompas.id/images/2024/08/01/8337230e094f9b8a89aca88b0775f05f-cover.jpg",
+                    "audioURL": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
                 }
             ]
         },
@@ -166,21 +179,24 @@
                     "description": "Dua belas kasus pembunuhan dan analisis data oleh Tim Jurnalisme Data Harian Kompas.",
                     "image_description": "Punggung atlet dengan kaus hijau mengangkat tangan di stadion penuh penonton",
                     "newsURL": "https://www.kompas.id/artikel/kasus-pembunuhan-tinggi-di-negara-miskin",
-                    "imageURL" : "https://assetd.kompas.id/ab3nliyDBWItteRNtOolD6Pv-mg=/1024x576/https%3A%2F%2Fasset.kgnewsroom.com%2Fphoto%2Fpre%2F2024%2F09%2F18%2F99f93450-d8ea-48df-90eb-b117abc4624c_jpg.jpg"
+                    "imageURL" : "https://assetd.kompas.id/ab3nliyDBWItteRNtOolD6Pv-mg=/1024x576/https%3A%2F%2Fasset.kgnewsroom.com%2Fphoto%2Fpre%2F2024%2F09%2F18%2F99f93450-d8ea-48df-90eb-b117abc4624c_jpg.jpg",
+                    "audioURL": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
                 },
                 {
                     "id": "14B",
                     "title": "Jaminan Wasit Berkualitas Tumbuhkan Semangat Jatim–Jabar di Final",
                     "description": null,
                     "newsURL": "https://www.kompas.id/artikel/kasus-pembunuhan-tinggi-di-negara-miskin",
-                    "imageURL": "https://cdn-dam.kompas.id/images/2024/08/01/8337230e094f9b8a89aca88b0775f05f-cover.jpg"
+                    "imageURL": "https://cdn-dam.kompas.id/images/2024/08/01/8337230e094f9b8a89aca88b0775f05f-cover.jpg",
+                    "audioURL": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
                 },
                 {
                     "id": "14C",
                     "title": "Kontroversi di PON Aceh Mencoreng Sepak Bola Indonesia, Bagaimana Itu Terjadi?",
                     "description": null,
                     "newsURL": "https://www.kompas.id/artikel/kasus-pembunuhan-tinggi-di-negara-miskin",
-                    "imageURL": "https://cdn-dam.kompas.id/images/2024/08/01/8337230e094f9b8a89aca88b0775f05f-cover.jpg"
+                    "imageURL": "https://cdn-dam.kompas.id/images/2024/08/01/8337230e094f9b8a89aca88b0775f05f-cover.jpg",
+                    "audioURL": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
                 }
             ]
         }
@@ -196,6 +212,7 @@
                     "image_description": "Pendaki dalam cuaca bersalju di puncak gunung",
                     "imageURL" : "https://assetd.kompas.id/BbrKRlv10uIf6eB0IIqat2ncnQg=/fit-in/1024x861/filters:format(webp):quality(80)/https://cdn-dam.kompas.id/images/2024/12/15/9acce82804d51303c3c46dcec51e8bc2-20241210_091336.jpg",
                     "newsURL": "https://www.kompas.id/artikel/kasus-pembunuhan-tinggi-di-negara-miskin",
+                    "audioURL": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
                 },
                 {
                     "id" : "15B",
@@ -203,7 +220,8 @@
                     "description": null,
                     "image_description": "Pesawat di landasan bersalju dengan kendaraan evakuasi",
                     "newsURL": "https://www.kompas.id/artikel/kasus-pembunuhan-tinggi-di-negara-miskin",
-                    "imageURL": "https://cdn-dam.kompas.id/images/2024/08/01/8337230e094f9b8a89aca88b0775f05f-cover.jpg"
+                    "imageURL": "https://cdn-dam.kompas.id/images/2024/08/01/8337230e094f9b8a89aca88b0775f05f-cover.jpg",
+                    "audioURL": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
                 },
                 {
                     "id" : "15C",
@@ -211,7 +229,8 @@
                     "description": null,
                     "image_description": "Sejumlah petugas Pertamina berfoto di kilang atau lokasi operasional",
                     "newsURL": "https://www.kompas.id/artikel/kasus-pembunuhan-tinggi-di-negara-miskin",
-                    "imageURL": "https://cdn-dam.kompas.id/images/2024/08/01/8337230e094f9b8a89aca88b0775f05f-cover.jpg"
+                    "imageURL": "https://cdn-dam.kompas.id/images/2024/08/01/8337230e094f9b8a89aca88b0775f05f-cover.jpg",
+                    "audioURL": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
                 },
                 {
                     "id" : "15D",
@@ -220,7 +239,8 @@
                     "description": null,
                     "image_description": "Pemandangan alam saat senja dengan langit berwarna oranye",
                     "newsURL": "https://www.kompas.id/artikel/kasus-pembunuhan-tinggi-di-negara-miskin",
-                    "imageURL": "https://cdn-dam.kompas.id/images/2024/08/01/8337230e094f9b8a89aca88b0775f05f-cover.jpg"
+                    "imageURL": "https://cdn-dam.kompas.id/images/2024/08/01/8337230e094f9b8a89aca88b0775f05f-cover.jpg",
+                    "audioURL": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
                 }
             ]
         },

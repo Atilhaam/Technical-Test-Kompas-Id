@@ -67,7 +67,7 @@ struct HeadlineSectionView: View {
                         Button(action: {
                             if playbackManager.currentlyPlayingID == content.id {
                                 playbackManager.togglePlayPause()
-                            } else if let url = URL(string: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3") {
+                            } else if let url = URL(string: content.audioURL ?? "") {
                                 playbackManager.startBackgroundAudio(
                                     from: url,
                                     title: content.headline ?? "",
@@ -93,7 +93,7 @@ struct HeadlineSectionView: View {
                                                               imageURL: content.imageURL,
                                                               publishedTime: content.publishedTime,
                                                               publishedDate: "", id: content.id,
-                                                              newsURL: content.newsURL)
+                                                              newsURL: content.newsURL, audioURL: content.audioURL)
                             viewModel.toggleBookmark(for: articleItem)
                         }) {
                             Image("save")
@@ -135,7 +135,7 @@ struct HeadlineSectionView: View {
                                          newsDescription: content.subheadline ?? "",
                                          publishedTime: content.publishedTime ?? "",
                                          PublishedDate: "",
-                                         newsURL: content.newsURL ?? "")
+                                         newsURL: content.newsURL ?? "", audioURL: content.audioURL ?? "")
                     onSelectNews?(item)
                 }
             }
@@ -154,7 +154,9 @@ struct HeadlineSectionView: View {
                                                  imageURL: content.imageURL ?? "",
                                                  newsDescription: content.subheadline ?? "",
                                                  publishedTime: content.publishedTime ?? "",
-                                                 PublishedDate: "", newsURL: content.newsURL ?? "")
+                                                 PublishedDate: "",
+                                                 newsURL: content.newsURL ?? "",
+                                                 audioURL: content.audioURL ?? "")
                             onSelectNews?(item)
                         }
                     }
@@ -190,7 +192,7 @@ struct HeadlineSectionView: View {
                                     Button(action: {
                                         if playbackManager.currentlyPlayingID == article.id {
                                             playbackManager.togglePlayPause()
-                                        } else if let url = URL(string: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3") {
+                                        } else if let url = URL(string: article.audioURL ?? "") {
                                             playbackManager.startBackgroundAudio(
                                                 from: url,
                                                 title: article.title ?? "",
@@ -215,7 +217,9 @@ struct HeadlineSectionView: View {
                                                                           mediaCount: 0,
                                                                           imageURL: article.imageURL ?? "",
                                                                           publishedTime: article.publishedTime,
-                                                                          publishedDate: "", id: article.id, newsURL: article.newsURL ?? "")
+                                                                          publishedDate: "", id: article.id,
+                                                                          newsURL: article.newsURL ?? "",
+                                                                          audioURL: article.audioURL ?? "")
                                         viewModel.toggleBookmark(for: articleItem)
                                     }) {
                                         Image("save")
@@ -259,7 +263,8 @@ struct HeadlineSectionView: View {
                                                  newsDescription: "",
                                                  publishedTime: article.publishedTime ?? "",
                                                  PublishedDate: "",
-                                                 newsURL: article.newsURL ?? "")
+                                                 newsURL: article.newsURL ?? "",
+                                                 audioURL: article.audioURL ?? "")
                             onSelectNews?(item)
                         }
                         
@@ -270,6 +275,7 @@ struct HeadlineSectionView: View {
 
             }
         }
+        .padding(.vertical)
         .background(Color(.systemBackground))
         .sheet(isPresented: $isSharing) {
             ShareSheet(activityItems: viewModel.shareContent)

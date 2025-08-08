@@ -61,7 +61,7 @@ struct LiveReportView: View {
                                          imageURL: article.imageURL ?? "",
                                          newsDescription: article.category ?? "",
                                          publishedTime: article.publishedTime ?? "",
-                                         PublishedDate: "", newsURL: article.newsURL ?? "")
+                                         PublishedDate: "", newsURL: article.newsURL ?? "", audioURL: article.audioURL)
                     onSelectNews?(item)
                 }
                 
@@ -91,7 +91,7 @@ struct LiveReportView: View {
                                                      imageURL: article.imageURL ?? "",
                                                      newsDescription: article.category ?? "",
                                                      publishedTime: article.publishedTime ?? "",
-                                                     PublishedDate: "", newsURL: article.newsURL ?? "")
+                                                     PublishedDate: "", newsURL: article.newsURL ?? "", audioURL: article.audioURL ?? "")
                                 onSelectNews?(item)
                             }
                         }
@@ -158,7 +158,7 @@ struct LiveReportView: View {
                                                      newsDescription: "",
                                                      publishedTime: "",
                                                      PublishedDate: "",
-                                                     newsURL: article.newsURL ?? "")
+                                                     newsURL: article.newsURL ?? "", audioURL: article.audioURL ?? "")
                                 onSelectNews?(item)
                             }
                             
@@ -170,5 +170,7 @@ struct LiveReportView: View {
                 }
             }
         }
+        .padding(.vertical)
+        .background(Color(.systemBackground))
     }
 }

@@ -26,6 +26,7 @@ struct AdsSectionView: View {
         }
         .padding(.horizontal, 32)
         .padding(.bottom, 32)
+        .padding(.vertical)
         
     }
 }

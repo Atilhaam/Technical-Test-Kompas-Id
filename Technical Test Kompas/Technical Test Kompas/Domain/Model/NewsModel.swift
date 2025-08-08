@@ -15,4 +15,5 @@ struct NewsModel: Equatable, Identifiable, Hashable {
     let publishedTime: String
     let PublishedDate: String
     let newsURL: String
+    let audioURL: String?
 }

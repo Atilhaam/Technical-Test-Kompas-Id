@@ -47,7 +47,7 @@ struct DetailNewsView: View {
                             Button(action: {
                                 if playbackManager.currentlyPlayingID == viewModel.news.id {
                                     playbackManager.togglePlayPause()
-                                } else if let url = URL(string: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3") {
+                                } else if let url = URL(string: viewModel.news.audioURL ?? "") {
                                     playbackManager.startBackgroundAudio(
                                         from: url,
                                         title: viewModel.news.title,

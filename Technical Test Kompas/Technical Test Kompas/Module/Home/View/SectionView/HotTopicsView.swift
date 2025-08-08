@@ -19,6 +19,8 @@ struct HotTopicsView: View {
                     .font(.headline)
                     .bold()
             }
+            .padding(.horizontal)
+
             
             if let items = section.data {
                 ForEach(items) { item in
@@ -53,10 +55,13 @@ struct HotTopicsView: View {
                             .stroke(Color.black.opacity(0.12), lineWidth: 1)
                     )
                 }
+                .padding(.horizontal)
+
 
             }
             
         }
-        .padding(.horizontal)
+        .padding(.vertical)
+        .background(Color(.systemBackground))
     }
 }

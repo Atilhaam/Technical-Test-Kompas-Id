@@ -69,7 +69,8 @@ extension NewsRepository: NewsRepositoryProtocol {
                 newsDescription: $0.newsDescription,
                 publishedTime: $0.publishedTime,
                 PublishedDate: $0.publishedDate,
-                newsURL: $0.newsURL
+                newsURL: $0.newsURL,
+                audioURL: $0.audioURL
             )
         }
     }

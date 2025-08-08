@@ -38,7 +38,7 @@ class DetailViewModel: ObservableObject {
                                       imageURL: news.imageURL,
                                       publishedTime: news.publishedTime,
                                       publishedDate: news.PublishedDate,
-                                      id: news.id, newsURL: news.newsURL)
+                                      id: news.id, newsURL: news.newsURL, audioURL: news.audioURL)
         useCase.saveNews(article)
             .observe(on: MainScheduler.instance)
             .subscribe(onNext: { [weak self] success in

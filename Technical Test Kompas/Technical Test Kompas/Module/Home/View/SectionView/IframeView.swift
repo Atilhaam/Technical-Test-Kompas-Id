@@ -34,6 +34,8 @@ struct IframeView: View {
                 .cornerRadius(12)
         }
         .padding(.horizontal)
+        .padding(.vertical)
+        .background(Color(.systemBackground))
 
     }
 }

@@ -50,7 +50,6 @@ struct SectionView: View {
                 }
             }
         }
-        .padding(.vertical)
         .background(Color(white: 0.97))
     }
 }
