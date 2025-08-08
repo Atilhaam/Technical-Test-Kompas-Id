@@ -51,12 +51,39 @@ struct ArticleListSectionView: View {
                             if let imageURLString = article.imageURL,
                                let url = URL(string: imageURLString),
                                article.id == articles.first?.id {
-                                WebImage(url: url)
-                                    .resizable()
-                                    .scaledToFill()
-                                    .frame(height: 200)
-                                    .clipped()
+                                if let mediaCount = article.mediaCount, mediaCount > 0 {
+                                    ZStack(alignment: .bottomTrailing) {
+                                        WebImage(url: url)
+                                            .resizable()
+                                            .scaledToFill()
+                                            .frame(height: 200)
+                                            .clipped()
+                                        
+                                        // Media count badge
+                                        MediaCountBadge(count: mediaCount)
+                                            .padding(8)
+                                    }
                                     .padding(.bottom, 8)
+                                } else if let label = article.label, !label.isEmpty {
+                                    ZStack(alignment: .topLeading) {
+                                        WebImage(url: url)
+                                            .resizable()
+                                            .scaledToFill()
+                                            .frame(height: 200)
+                                            .clipped()
+                                        
+                                        // Media count badge
+                                        LabelBadge(label: label)
+                                            .padding(8)
+                                    }
+                                } else {
+                                    WebImage(url: url)
+                                        .resizable()
+                                        .scaledToFill()
+                                        .frame(height: 200)
+                                        .clipped()
+                                }
+                                
                             }
                             
                             VStack(alignment: .leading, spacing: 4) {
@@ -160,6 +187,48 @@ struct ArticleListSectionView: View {
         }
         .background(Color(.systemBackground))
         .padding(.vertical)
+    }
+}
+
+struct MediaCountBadge: View {
+    let count: Int
+    
+    var body: some View {
+        HStack(spacing: 8) {
+            Image(systemName: "camera.fill")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 20, height: 20)
+                        
+            Text("\(count)")
+                .font(.system(size: 20, weight: .semibold))
+        }
+        .foregroundColor(.white)
+        .padding(.horizontal, 8)
+        .padding(.vertical, 4)
+        .background(Color.black.opacity(0.5))
+        .clipShape(Capsule())
+    }
+}
+
+struct LabelBadge: View {
+    let label: String
+    
+    var body: some View {
+        HStack(spacing: 8) {
+            Image("kompaslogo")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 12, height: 10)
+                        
+            Text("\(label.uppercased())")
+                .font(.system(size: 12, weight: .semibold))
+        }
+        .foregroundColor(.white)
+        .padding(.horizontal, 8)
+        .padding(.vertical, 4)
+        .background(Color.black.opacity(0.5))
+        .clipShape(Capsule())
     }
 }
 

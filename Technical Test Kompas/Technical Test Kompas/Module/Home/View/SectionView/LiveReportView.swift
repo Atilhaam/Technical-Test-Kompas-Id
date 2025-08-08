@@ -19,24 +19,20 @@ struct LiveReportView: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
-            if let label = report.reportType {
-                Text(label)
-                    .font(.caption)
-                    .bold()
-                    .foregroundColor(.white)
-                    .padding(.horizontal, 8)
-                    .padding(.vertical, 4)
-                    .background(Color.red)
-                    .cornerRadius(4)
-            }
-            
             if let article = report.mainArticle {
                 if let imageURL = article.imageURL, let url = URL(string: imageURL) {
-                    WebImage(url: url)
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(height: 200)
-                        .clipped()
+                    ZStack(alignment: .topLeading) {
+                        WebImage(url: url)
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(height: 200)
+                            .clipped()
+                        
+                        TypeBadge(label: report.reportType ?? "")
+                            .padding(8)
+                       
+                    }
+                    
                 }
                 
                 VStack(alignment: .leading, spacing: 8) {
@@ -172,5 +168,21 @@ struct LiveReportView: View {
         }
         .padding(.vertical)
         .background(Color(.systemBackground))
+    }
+}
+
+struct TypeBadge: View {
+    let label: String
+    
+    var body: some View {
+        HStack(spacing: 8) {
+            Text("\(label.uppercased())")
+                .font(.system(size: 12, weight: .semibold))
+        }
+        .foregroundColor(.white)
+        .padding(.horizontal, 8)
+        .padding(.vertical, 4)
+        .background(.red)
+        .clipShape(Capsule())
     }
 }
