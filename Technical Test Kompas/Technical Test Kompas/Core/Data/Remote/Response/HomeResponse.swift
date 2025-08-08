@@ -254,7 +254,7 @@ extension Section: Identifiable {
             return "\(section.type ?? "articleList")-\(section.title ?? UUID().uuidString)"
         case .liveReport:
             return "live_report-\(UUID().uuidString)"
-        case .adsCampaign(let section):
+        case .adsCampaign(_):
             return "ads_campaign-\(UUID().uuidString)"
         }
     }

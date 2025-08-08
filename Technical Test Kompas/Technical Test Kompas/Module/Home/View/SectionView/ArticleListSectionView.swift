@@ -10,11 +10,6 @@ import AVFoundation
 import MediaPlayer
 import SDWebImageSwiftUI
 
-import SwiftUI
-import SDWebImageSwiftUI
-import AVFoundation
-import MediaPlayer
-
 struct ArticleListSectionView: View {
     let section: ArticleListSection
     @StateObject private var viewModel: HomeViewModel
@@ -177,7 +172,6 @@ struct ArticleListSectionView: View {
 
 extension ArticleListSectionView {
     // MARK: - AUDIO BACKGROUND PLAYER
-    
     private func startBackgroundAudio(from url: URL, title: String, articleID: String) {
         do {
             try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
