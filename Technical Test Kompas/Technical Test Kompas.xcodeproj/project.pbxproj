@@ -1,0 +1,477 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		677231E02E41BBCE002B0AB0 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 677231DF2E41BBCE002B0AB0 /* RealmSwift */; };
+		67C654DE2E43BA9A00A9EC2D /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 677231DF2E41BBCE002B0AB0 /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		67D81B0E2E41DE77008BA0EA /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 67D81B0D2E41DE77008BA0EA /* RxBlocking */; };
+		67D81B102E41DE77008BA0EA /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 67D81B0F2E41DE77008BA0EA /* RxCocoa */; };
+		67D81B122E41DE77008BA0EA /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 67D81B112E41DE77008BA0EA /* RxRelay */; };
+		67D81B142E41DE77008BA0EA /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 67D81B132E41DE77008BA0EA /* RxSwift */; };
+		67DBD1482E4055C2000DA199 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 67DBD1472E4055C2000DA199 /* SDWebImage */; };
+		67DBD14A2E4055C2000DA199 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 67DBD1492E4055C2000DA199 /* SDWebImageMapKit */; };
+		67DBD14D2E405685000DA199 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 67DBD14C2E405685000DA199 /* SDWebImageSwiftUI */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		67DBD17A2E41B672000DA199 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				67C654DE2E43BA9A00A9EC2D /* RealmSwift in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		67DBD0E22E3E365D000DA199 /* Technical Test Kompas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Technical Test Kompas.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		67DBD0F72E3E3660000DA199 /* Exceptions for "Technical Test Kompas" folder in "Technical Test Kompas" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 67DBD0E12E3E365D000DA199 /* Technical Test Kompas */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		67DBD0E42E3E365D000DA199 /* Technical Test Kompas */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				67DBD0F72E3E3660000DA199 /* Exceptions for "Technical Test Kompas" folder in "Technical Test Kompas" target */,
+			);
+			path = "Technical Test Kompas";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		67DBD0DF2E3E365D000DA199 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67D81B102E41DE77008BA0EA /* RxCocoa in Frameworks */,
+				677231E02E41BBCE002B0AB0 /* RealmSwift in Frameworks */,
+				67D81B122E41DE77008BA0EA /* RxRelay in Frameworks */,
+				67DBD14D2E405685000DA199 /* SDWebImageSwiftUI in Frameworks */,
+				67DBD14A2E4055C2000DA199 /* SDWebImageMapKit in Frameworks */,
+				67DBD1482E4055C2000DA199 /* SDWebImage in Frameworks */,
+				67D81B142E41DE77008BA0EA /* RxSwift in Frameworks */,
+				67D81B0E2E41DE77008BA0EA /* RxBlocking in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		677231C22E41B8A5002B0AB0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		67DBD0D92E3E365D000DA199 = {
+			isa = PBXGroup;
+			children = (
+				67DBD0E42E3E365D000DA199 /* Technical Test Kompas */,
+				677231C22E41B8A5002B0AB0 /* Frameworks */,
+				67DBD0E32E3E365D000DA199 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		67DBD0E32E3E365D000DA199 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				67DBD0E22E3E365D000DA199 /* Technical Test Kompas.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		67DBD0E12E3E365D000DA199 /* Technical Test Kompas */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67DBD0F82E3E3660000DA199 /* Build configuration list for PBXNativeTarget "Technical Test Kompas" */;
+			buildPhases = (
+				67DBD0DE2E3E365D000DA199 /* Sources */,
+				67DBD0DF2E3E365D000DA199 /* Frameworks */,
+				67DBD0E02E3E365D000DA199 /* Resources */,
+				67DBD17A2E41B672000DA199 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				67DBD0E42E3E365D000DA199 /* Technical Test Kompas */,
+			);
+			name = "Technical Test Kompas";
+			packageProductDependencies = (
+				67DBD1472E4055C2000DA199 /* SDWebImage */,
+				67DBD1492E4055C2000DA199 /* SDWebImageMapKit */,
+				67DBD14C2E405685000DA199 /* SDWebImageSwiftUI */,
+				677231DF2E41BBCE002B0AB0 /* RealmSwift */,
+				67D81B0D2E41DE77008BA0EA /* RxBlocking */,
+				67D81B0F2E41DE77008BA0EA /* RxCocoa */,
+				67D81B112E41DE77008BA0EA /* RxRelay */,
+				67D81B132E41DE77008BA0EA /* RxSwift */,
+			);
+			productName = "Technical Test Kompas";
+			productReference = 67DBD0E22E3E365D000DA199 /* Technical Test Kompas.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		67DBD0DA2E3E365D000DA199 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1630;
+				LastUpgradeCheck = 1630;
+				TargetAttributes = {
+					67DBD0E12E3E365D000DA199 = {
+						CreatedOnToolsVersion = 16.3;
+					};
+				};
+			};
+			buildConfigurationList = 67DBD0DD2E3E365D000DA199 /* Build configuration list for PBXProject "Technical Test Kompas" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 67DBD0D92E3E365D000DA199;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				67DBD1462E4055C2000DA199 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				67DBD14B2E405685000DA199 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				677231DE2E41BBCE002B0AB0 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				67D81B0C2E41DE77008BA0EA /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 67DBD0E32E3E365D000DA199 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				67DBD0E12E3E365D000DA199 /* Technical Test Kompas */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		67DBD0E02E3E365D000DA199 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		67DBD0DE2E3E365D000DA199 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		67DBD0F92E3E3660000DA199 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 45MQ5Z53TD;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Technical Test Kompas/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ilham.Technical-Test-Kompas";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		67DBD0FA2E3E3660000DA199 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 45MQ5Z53TD;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Technical Test Kompas/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ilham.Technical-Test-Kompas";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		67DBD0FB2E3E3660000DA199 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		67DBD0FC2E3E3660000DA199 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		67DBD0DD2E3E365D000DA199 /* Build configuration list for PBXProject "Technical Test Kompas" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67DBD0FB2E3E3660000DA199 /* Debug */,
+				67DBD0FC2E3E3660000DA199 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67DBD0F82E3E3660000DA199 /* Build configuration list for PBXNativeTarget "Technical Test Kompas" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67DBD0F92E3E3660000DA199 /* Debug */,
+				67DBD0FA2E3E3660000DA199 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		677231DE2E41BBCE002B0AB0 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		67D81B0C2E41DE77008BA0EA /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.9.0;
+			};
+		};
+		67DBD1462E4055C2000DA199 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.21.1;
+			};
+		};
+		67DBD14B2E405685000DA199 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		677231DF2E41BBCE002B0AB0 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 677231DE2E41BBCE002B0AB0 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+		67D81B0D2E41DE77008BA0EA /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 67D81B0C2E41DE77008BA0EA /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
+		};
+		67D81B0F2E41DE77008BA0EA /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 67D81B0C2E41DE77008BA0EA /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		67D81B112E41DE77008BA0EA /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 67D81B0C2E41DE77008BA0EA /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		67D81B132E41DE77008BA0EA /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 67D81B0C2E41DE77008BA0EA /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		67DBD1472E4055C2000DA199 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 67DBD1462E4055C2000DA199 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		67DBD1492E4055C2000DA199 /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 67DBD1462E4055C2000DA199 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
+		67DBD14C2E405685000DA199 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 67DBD14B2E405685000DA199 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 67DBD0DA2E3E365D000DA199 /* Project object */;
+}
