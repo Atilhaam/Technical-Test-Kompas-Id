@@ -14,13 +14,14 @@ struct HeadlineSectionView: View {
     let content: HeadlineData
     var onSelectNews: ((NewsModel) -> Void)?
 
-    @StateObject private var viewModel: HomeViewModel
+    @ObservedObject var viewModel: HomeViewModel
+    @EnvironmentObject var playbackManager: PlaybackManager
     @State private var isSharing: Bool = false
 
     
     init(content: HeadlineData, viewModel: HomeViewModel, onSelectNews: ((NewsModel) -> Void)? = nil) {
         self.content = content
-        _viewModel = StateObject(wrappedValue: viewModel)
+        _viewModel = ObservedObject(wrappedValue: viewModel)
         self.onSelectNews = onSelectNews
     }
     
@@ -64,11 +65,23 @@ struct HeadlineSectionView: View {
                     
                     HStack(spacing: 8) {
                         Button(action: {
-                           
+                            if playbackManager.currentlyPlayingID == content.id {
+                                playbackManager.togglePlayPause()
+                            } else if let url = URL(string: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3") {
+                                playbackManager.startBackgroundAudio(
+                                    from: url,
+                                    title: content.headline ?? "",
+                                    articleID: content.id ?? ""
+                                )
+                            }
                         }) {
-                            Image("listen")
-                                .resizable()
-                                .frame(width: 40, height: 40)
+                            if playbackManager.isPlaying && playbackManager.currentlyPlayingID == content.id {
+                                Image(systemName: "pause.circle.fill")
+                            } else {
+                                Image("listen")
+                                    .resizable()
+                                    .frame(width: 40, height: 40)
+                            }
                         }
                        
                         Button(action: {
@@ -175,11 +188,23 @@ struct HeadlineSectionView: View {
                                 
                                 HStack {
                                     Button(action: {
-                                        
+                                        if playbackManager.currentlyPlayingID == article.id {
+                                            playbackManager.togglePlayPause()
+                                        } else if let url = URL(string: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3") {
+                                            playbackManager.startBackgroundAudio(
+                                                from: url,
+                                                title: article.title ?? "",
+                                                articleID: article.id
+                                            )
+                                        }
                                     }) {
-                                        Image("listen")
-                                            .resizable()
-                                            .frame(width: 40, height: 40)
+                                        if playbackManager.isPlaying && playbackManager.currentlyPlayingID == article.id {
+                                            Image(systemName: "pause.circle.fill")
+                                        } else {
+                                            Image("listen")
+                                                .resizable()
+                                                .frame(width: 40, height: 40)
+                                        }
                                     }
                                     
                                     Button(action: {

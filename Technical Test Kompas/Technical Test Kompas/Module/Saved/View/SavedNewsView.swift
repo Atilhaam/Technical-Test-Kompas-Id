@@ -13,6 +13,7 @@ import MediaPlayer
 
 struct SavedNewsView: View {
     @StateObject private var viewModel: SavedNewsViewModel
+    @EnvironmentObject var playbackManager: PlaybackManager
     @State private var selectedNews: NewsModel?
     @State private var isSharing: Bool = false
     @State private var shareContent: [Any] = []
@@ -62,11 +63,23 @@ struct SavedNewsView: View {
                             
                             // LISTEN BUTTON (toggle play/pause)
                             Button(action: {
-                                
+                                if playbackManager.currentlyPlayingID == savedNews.id {
+                                    playbackManager.togglePlayPause()
+                                } else if let url = URL(string: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3") {
+                                    playbackManager.startBackgroundAudio(
+                                        from: url,
+                                        title: savedNews.title,
+                                        articleID: savedNews.id
+                                    )
+                                }
                             }) {
-                                Image("listen")
-                                    .resizable()
-                                    .frame(width: 40, height: 40)
+                                if playbackManager.isPlaying && playbackManager.currentlyPlayingID == savedNews.id {
+                                    Image(systemName: "pause.circle.fill")
+                                } else {
+                                    Image("listen")
+                                        .resizable()
+                                        .frame(width: 40, height: 40)
+                                }
                             }
                             
                             Button(action: {
@@ -121,6 +134,7 @@ struct SavedNewsView: View {
         }
         .navigationDestination(item: $selectedNews) { news in
             navigator.makeDetailView(for: news)
+                .environmentObject(playbackManager)
         }
         .navigationTitle("Berita Tersimpan")
         .navigationBarTitleDisplayMode(.inline)

@@ -14,6 +14,7 @@ import SDWebImageSwiftUI
 struct DetailNewsView: View {
     @StateObject private var viewModel: DetailViewModel
     @State private var isSharing: Bool = false
+    @EnvironmentObject var playbackManager: PlaybackManager
 
     init(viewModel: DetailViewModel) {
         _viewModel = StateObject(wrappedValue: viewModel)
@@ -44,11 +45,23 @@ struct DetailNewsView: View {
 
                         HStack(spacing: 8) {
                             Button(action: {
-                                
+                                if playbackManager.currentlyPlayingID == viewModel.news.id {
+                                    playbackManager.togglePlayPause()
+                                } else if let url = URL(string: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3") {
+                                    playbackManager.startBackgroundAudio(
+                                        from: url,
+                                        title: viewModel.news.title,
+                                        articleID: viewModel.news.id
+                                    )
+                                }
                             }) {
-                                Image("listen")
-                                    .resizable()
-                                    .frame(width: 40, height: 40)
+                                if playbackManager.isPlaying && playbackManager.currentlyPlayingID == viewModel.news.id {
+                                    Image(systemName: "pause.circle.fill")
+                                } else {
+                                    Image("listen")
+                                        .resizable()
+                                        .frame(width: 40, height: 40)
+                                }
                             }
 
                             Button(action: {

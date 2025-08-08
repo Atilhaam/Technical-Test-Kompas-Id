@@ -12,14 +12,15 @@ import SDWebImageSwiftUI
 
 struct ArticleListSectionView: View {
     let section: ArticleListSection
-    @StateObject private var viewModel: HomeViewModel
+    @ObservedObject var viewModel: HomeViewModel
+    @EnvironmentObject var playbackManager: PlaybackManager
     var onSelectNews: ((NewsModel) -> Void)?
     @State private var isSharing: Bool = false
     
     init(section: ArticleListSection, viewModel: HomeViewModel, onSelectNews: ((NewsModel) -> Void)? = nil) {
         self.section = section
         self.onSelectNews = onSelectNews
-        _viewModel = StateObject(wrappedValue: viewModel)
+        _viewModel = ObservedObject(wrappedValue: viewModel)
     }
     
     var body: some View {
@@ -81,12 +82,24 @@ struct ArticleListSectionView: View {
                                     Spacer()
                                     
                                     // LISTEN BUTTON (toggle play/pause)
-                                    Button(action: {
-                                        
-                                    }) {
-                                        Image("listen")
-                                            .resizable()
-                                            .frame(width: 40, height: 40)
+                                    Button {
+                                        if playbackManager.currentlyPlayingID == article.id {
+                                            playbackManager.togglePlayPause()
+                                        } else if let url = URL(string: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3") {
+                                            playbackManager.startBackgroundAudio(
+                                                from: url,
+                                                title: article.title ?? "",
+                                                articleID: article.id ?? ""
+                                            )
+                                        }
+                                    } label: {
+                                        if playbackManager.isPlaying && playbackManager.currentlyPlayingID == article.id {
+                                            Image(systemName: "pause.circle.fill")
+                                        } else {
+                                            Image("listen")
+                                                .resizable()
+                                                .frame(width: 40, height: 40)
+                                        }
                                     }
                                     
                                     // SAVE BUTTON

@@ -11,12 +11,13 @@ import SwiftUI
 struct SectionView: View {
     let section: Section
     
-    @StateObject private var viewModel: HomeViewModel
+    @ObservedObject private var viewModel: HomeViewModel
+    @EnvironmentObject var playbackManager: PlaybackManager
     var onSelectNews: ((NewsModel) -> Void)? = nil
     
     init(section: Section, viewModel: HomeViewModel, onSelectNews: ((NewsModel) -> Void)? = nil) {
         self.section = section
-        _viewModel = StateObject(wrappedValue: viewModel)
+        _viewModel = ObservedObject(wrappedValue: viewModel)
         self.onSelectNews = onSelectNews
     }
 

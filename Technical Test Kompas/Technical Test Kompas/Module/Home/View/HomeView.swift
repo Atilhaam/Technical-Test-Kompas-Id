@@ -11,8 +11,8 @@ struct HomeView: View {
     @StateObject private var viewModel: HomeViewModel
     @State private var selectedNews: NewsModel?
     var navigator: HomeNavigator
+    @EnvironmentObject var playbackManager: PlaybackManager
 
-    
     init(viewModel: HomeViewModel, navigator: HomeNavigator) {
         _viewModel = StateObject(wrappedValue: viewModel)
         self.navigator = navigator
@@ -37,6 +37,7 @@ struct HomeView: View {
         }
         .navigationDestination(item: $selectedNews) { news in
             navigator.makeDetailView(for: news)
+                .environmentObject(playbackManager)
         }
         .navigationTitle("Berita Utama")
         .navigationBarTitleDisplayMode(.inline)
