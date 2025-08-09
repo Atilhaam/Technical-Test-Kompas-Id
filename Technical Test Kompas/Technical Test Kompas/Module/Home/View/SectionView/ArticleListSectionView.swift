@@ -94,7 +94,7 @@ struct ArticleListSectionView: View {
                                         .fixedSize(horizontal: false, vertical: true)
                                 }
                                 
-                                if let description = article.description {
+                                if let description = article.description, article.id == articles.first?.id {
                                     Text(description)
                                         .font(.subheadline)
                                         .foregroundColor(.secondary)
