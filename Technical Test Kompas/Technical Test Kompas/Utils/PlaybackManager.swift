@@ -96,7 +96,6 @@ final class PlaybackManager: ObservableObject {
         MPNowPlayingInfoCenter.default().nowPlayingInfo = nowPlayingInfo
     }
 
-    // Ensure we add command handlers only once
     private func configureRemoteCommandCenterIfNeeded() {
         guard !commandCenterConfigured else { return }
         commandCenterConfigured = true

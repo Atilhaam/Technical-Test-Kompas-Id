@@ -40,10 +40,8 @@ class HomeViewModel: ObservableObject {
             .observe(on: MainScheduler.instance)
             .subscribe(onNext: { [weak self] isSaved in
                 if isSaved {
-                    print("id: \(id) is inserted from set")
                     self?.savedNewsIDs.insert(id)
                 } else {
-                    print("id: \(id) is removed from set")
                     self?.savedNewsIDs.remove(id)
                 }
             }, onError: { error in

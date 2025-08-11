@@ -224,7 +224,7 @@ struct HeadlineSectionView: View {
                                     }) {
                                         Image("save")
                                             .resizable()
-                                            .renderingMode(.template) // allow tinting
+                                            .renderingMode(.template) 
                                             .foregroundColor(viewModel.savedNewsIDs.contains(article.id) ? .blue : .gray)
                                             .frame(width: 40, height: 40)
                                     }
@@ -245,7 +245,7 @@ struct HeadlineSectionView: View {
                                         isSharing = true
                                         
                                     }) {
-                                        Image("share") // Use your asset name here
+                                        Image("share")
                                             .resizable()
                                             .frame(width: 40, height: 40)
                                     }

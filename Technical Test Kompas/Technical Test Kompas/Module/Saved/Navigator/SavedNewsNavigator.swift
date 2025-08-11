@@ -14,7 +14,6 @@ protocol SavedNewsNavigator {
 
 final class DefaultSavedNewsNavigator: SavedNewsNavigator {
     func makeDetailView(for news: NewsModel) -> DetailNewsView {
-        print("masuk sini")
         let viewModel = Injection().provideDetailViewModel(news: news)
         return DetailNewsView(viewModel: viewModel)
     }

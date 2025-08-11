@@ -61,7 +61,6 @@ struct LiveReportView: View {
                     onSelectNews?(item)
                 }
                 
-                // Related articles with dot separator
                 if let related = report.relatedArticles {
                     VStack(alignment: .leading, spacing: 6) {
                         ForEach(related) { article in
